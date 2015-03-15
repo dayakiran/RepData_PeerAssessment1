@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -22,7 +27,7 @@ stepsbydate <- aggregate(steps ~ date, data = data, FUN = sum)
 barplot(stepsbydate$steps, names.arg = stepsbydate$date, xlab = "date", ylab = "steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 3. The mean and median of total number of steps taken per day.
 
@@ -51,7 +56,7 @@ intervalsteps<-aggregate(steps~interval,data=data,FUN=mean)
 plot(intervalsteps,type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 2. The 5-minute interval which contains the maximum number of steps
 
 ```r
@@ -87,7 +92,7 @@ newstepsbydate <- aggregate(steps ~ date, data = newdata, FUN = sum)
 barplot(newstepsbydate$steps, names.arg = newstepsbydate$date, xlab = "date", ylab = "steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
 4. The mean and median of the modified dataset
 
 ```r
@@ -133,4 +138,4 @@ for (type in c("weekend", "weekday")) {
 }
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
